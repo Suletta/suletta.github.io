@@ -2,23 +2,23 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Sula Chiovenda
+Sula Chiovenda
+Unity developer
 
 Show Contacts
 
 Email
-richard@example.com
+chiovendasula@gmail.com
 
 Phone
-+1 (213) 352-2795
++39 328 072 910 1
 
 Birthday
-June 23, 1982
+September 6, 1995
 
 Location
-Sacramento, California, USA
+Italy
 
 # navbar
 
