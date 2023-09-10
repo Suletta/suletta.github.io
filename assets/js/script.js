@@ -1,6 +1,12 @@
 'use strict';
 
-
+const NICE_HUSH_DESCRIPTION = "Event: BigRock Game Jam<br>Multiplayer game for Twitch chat.<br><br>Team: 3 developers, 4 3D artists.";
+const FRIENDS_NOT_FOUND_DESCRIPTION = "Event: GameDev.tv Game Jam 2021<br><br>Game design, team management, asset implementation and gameplay development.<br><br>Team : 10 members.";
+const TIMEPURA_EBI_DESCRIPTION = "Event: Bullet Hell Jam 2021<br><br>I took care of the assets implementation, gameplay development and UI system.<br><br>Team: 7 members";
+const METAPOETRY_DESCRIPTION = "Partner Company: Alterego Digital LAB<br>Technical consulting for vr experience.<br>Team: 7 members.";
+const H_ALLIDAY_DESCRIPTION = "Company: H-Farm<br>Multiplayer virtual reality classroom for Meta Quest 1 and Meta Quest 2 standalone.<br>My role: UI programmer, tool programmer, gameplay programmer.<br>Team : 3 programmers, 3 3D artists, 1 UI artist, 1 product designer.";
+const DEBATE_DESCRIPTION = "Company:H-Farm<br>Prototype of a virtual debate championship, tested by '' to develop an official virtual format.<br>Multiplayer VR experience with role system.<br>My role: UI programmer, gameplay programmer.<br>Team : 3 programmers, 3 3D artists.";
+const UNANNOUNCED1_DESCRIPTION = "Company:BigRock<br>VR multiplayer brainstorming activity in fantasy setting.<br>My role: game designer, gameplay programmer, integration with server backend, asset integration and optimization, shader art, vfx optimization.<br>Team : 2 developers, 2 3D artists.";
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -14,12 +20,11 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const overlay = document.querySelector("[data-overlay]");
 
 //MODAL
 //projects variables
+const testimonialsItem = document.querySelectorAll("[data-projects-item]");
+const overlay = document.querySelector("[data-overlay]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 
@@ -27,6 +32,8 @@ const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
+const modalLink = document.querySelector("[data-modal-link]");
+const modalAltLink = document.querySelector("[data-modal-alt-link]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
@@ -39,26 +46,69 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
   testimonialsItem[i].addEventListener("click", function () {
 
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    modalTitle.innerHTML = this.querySelector("[data-projects-title]").innerHTML;
+    modalImg.src = this.querySelector("[data-projects-avatar]").src;
+    modalImg.alt = this.querySelector("[data-projects-avatar]").alt;
+
+    let text;
+    let link;
+
+    switch (modalTitle.innerHTML) {
+      case "Nice Hush":
+        text = NICE_HUSH_DESCRIPTION;
+        link = "https://github.com/SanzioPedersoli/JamM34";
+        break;
+      case "Friends Not Found":
+        text = FRIENDS_NOT_FOUND_DESCRIPTION;
+        link = "https://suletta.itch.io/friends-not-found";
+        break;
+      case "Timepura Ebi":
+        text = TIMEPURA_EBI_DESCRIPTION;
+        link = "https://mattonzolo.itch.io/timepura-ebi";
+        break;
+      case "Meta poetry":
+        text = METAPOETRY_DESCRIPTION;
+        link = "https://www.linkedin.com/posts/alterego-digital-lab_poesia-musica-realtaeqvirtuale-activity-7072127681487679489-5HgP?utm_source=share&utm_medium=member_android";
+        break;
+      case "H-Alliday":
+        text = H_ALLIDAY_DESCRIPTION;
+        link = "";
+        break;
+      case "Debate":
+        text = DEBATE_DESCRIPTION;
+        link = "";
+        break;
+        case "Unannounced project":
+        text = UNANNOUNCED1_DESCRIPTION;
+        link = "";
+        break;
+      default:
+        text = "Aggiungi testo";
+        link = "Aggiungi link";
+        break;
+
+    }
+
+    modalText.innerHTML = text;
+
+    if(link){
+      modalLink.innerHTML = "Project link";
+      modalLink.href = link;
+      modalAltLink.innerHTML = "";
+    }
+    else{
+      modalAltLink.innerHTML = "Link not available. Contact me for more info";
+      modalLink.innerHTML = "";
+    }
 
     testimonialsModalFunc();
 
   });
-
 }
 
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-
-
-
 
 // custom select variables
 const select = document.querySelector("[data-select]");

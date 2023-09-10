@@ -565,17 +565,17 @@ main {
 
 
 /**
- * #testimonials 
+ * #skills 
  */
 
-.testimonials { margin-bottom: 30px; }
+.skills { margin-bottom: 30px; }
 
-.testimonials-title { margin-bottom: 20px; }
+.skills-title { margin-bottom: 20px; }
 
-.testimonials-list {
+.skills-list {
   }
 
-.testimonials-item {
+.skills-item {
   position: relative;
   min-width: 100%;
   height: auto;
@@ -583,7 +583,7 @@ main {
   margin-bottom: 20px;
   }
 
-.testimonials-avatar-box {
+.skills-avatar-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -594,9 +594,9 @@ main {
   
 }
 
-.testimonials-item-title { margin-bottom: 7px; }
+.skills-item-title { margin-bottom: 7px; }
 
-.testimonials-text {
+.skills-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -894,7 +894,7 @@ main {
 
 .project-title,
 .project-category { margin-left: 10px; }
-
+dal-container
 .project-title {
   color: var(--white-2);
   font-size: var(--fs-5);
@@ -914,7 +914,7 @@ main {
 \*-----------------------------------*/
 
  /**
- * #testimonials-modal
+ * #project-modal
  */
 
 .modal-container {
@@ -960,7 +960,7 @@ main {
   pointer-events: all;
 }
 
-.testimonials-modal {
+.projects-modal {
   background: var(--eerie-black-2);
   position: relative;
   padding: 15px;
@@ -969,12 +969,12 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-5);
   transform: scale(1.2);
-  opacity: 0;
+  /* opacity: 1; */
   transition: var(--transition-1);
   z-index: 2;
 }
 
-.modal-container.active .testimonials-modal {
+.modal-container.active .project-modal {
   transform: scale(1);
   opacity: 1;
 }
@@ -1020,6 +1020,13 @@ main {
 }
 
 .modal-content p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+.modal-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -1403,11 +1410,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .service-content-box { text-align: left; }
 
-  /* testimonials */
+  /* skills */
 
-  .testimonials-title { margin-bottom: 25px; }
+  .skills-title { margin-bottom: 25px; }
 
-  .testimonials-list {
+  .skills-list {
     gap: 30px;
     margin: 0 -30px;
     padding: 30px;
@@ -1419,34 +1426,38 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding-top: 25px;
   }
 
-  .testimonials-avatar-box {
+  .skills-avatar-box {
     transform: translate(30px, -30px);
     border-radius: 20px;
   }
 
-  .testimonials-avatar-box img { width: 80px; }
+  .skills-avatar-box img { width: 80px; }
 
-  .testimonials-item-title {
+  .skills-item-title {
     margin-bottom: 10px;
     margin-left: 95px;
   }
 
-  .testimonials-text {
+  .skills-text {
     line-clamp: 2;
     -webkit-line-clamp: 2;
   }
 
-  /* testimonials modal */
+  /* projects modal */
 
   .modal-container { padding: 20px; }
 
-  .testimonials-modal {
+  .projects-modal {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
     gap: 25px;
     padding: 30px;
     border-radius: 20px;
+  }
+
+  .alt-link{
+    
   }
 
   .modal-img-wrapper {
@@ -1581,11 +1592,13 @@ textarea.form-input::-webkit-resizer { display: none; }
    * ABOUT
    */
 
-  /* testimonials modal */
+  /* projects modal */
 
-  .testimonials-modal {
+  .projects-modal {
     gap: 35px;
     max-width: 680px;
+    min-width: 500px;
+    min-height: 300px;
   }
 
   .modal-avatar-box img { width: 80px; }
@@ -1727,9 +1740,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 20px 25px;
   }
 
-  /* testimonials */
+  /* skills */
 
-  .testimonials-item { min-width: calc(50% - 15px); }
+  .skills-item { min-width: calc(50% - 15px); }
 
   /* clients */
 

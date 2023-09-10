@@ -288,22 +288,22 @@
           - skills
         -->
 
-        <section class="testimonials">
+        <section class="skills">
 
-          <h3 class="h3 testimonials-title">Main skills</h3>
+          <h3 class="h3 skills-title">Main skills</h3>
 
-          <ul class="testimonials-list">
+          <ul class="skills-list">
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+            <li class="skills-item">
+              <div class="content-card">
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/icon-unity.svg" alt="Unity" width="60" style="padding: 15%;" data-testimonials-avatar>
+                <figure class="skills-avatar-box">
+                  <img src="./assets/images/icon-unity.svg" alt="Unity" width="60" style="padding: 15%;" >
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Great Unity Knowledge</h4>
+                <h4 class="h4 skills-item-title">Great Unity Knowledge</h4>
 
-                <div class="testimonials-text" data-testimonials-text>
+                <div class="skills-text">
                   <p>
                     A strong understanding of the Unity game engine, proficiency in C#, 
                     knowledge of game design principles enable me to employ my problem-solving abilities to troubleshoot and optimize game performance, 
@@ -314,16 +314,16 @@
               </div>
             </li>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+            <li class="skills-item">
+              <div class="content-card" >
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/icon-vr-glasses.svg" alt="Cube" width="60" style="padding: 12%;" data-testimonials-avatar>
+                <figure class="skills-avatar-box">
+                  <img src="./assets/images/icon-vr-glasses.svg" alt="Cube" width="60" style="padding: 12%;" >
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Up-to-date with the XR industry</h4>
+                <h4 class="h4 skills-item-title" >Up-to-date with the XR industry</h4>
 
-                <div class="testimonials-text" data-testimonials-text>
+                <div class="skills-text" >
                   <p>
                     The tech industry is never static. Therefore, I think that a great developer needs to always be a student.
                     This is why I keep up with the latest developments and trends, 
@@ -335,16 +335,16 @@
               </div>
             </li>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+            <li class="skills-item">
+              <div class="content-card" >
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/icon-heart.svg" alt="Heart" width="60" style="padding: 15%;" data-testimonials-avatar>
+                <figure class="skills-avatar-box">
+                  <img src="./assets/images/icon-heart.svg" alt="Heart" width="60" style="padding: 15%;" >
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Infinite passion for my job</h4>
+                <h4 class="h4 skills-item-title" >Infinite passion for my job</h4>
 
-                <div class="testimonials-text" data-testimonials-text>
+                <div class="skills-text" >
                   <p>
                     Seeing the positive impact of my work on others' lives gets me excited every day, 
                     and I strive to make a difference in every project that I undertake. 
@@ -557,7 +557,50 @@
         - #PORTFOLIO
       -->
 
+
       <article class="portfolio" data-page="portfolio">
+
+<!--
+          - project modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="projects-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="" alt="" width="80" data-modal-img>
+              </figure>
+
+              <!-- <img src="./assets/images/icon-quote.svg" alt="quote icon"> -->
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title></h4>
+
+              <a class="text-link" data-modal-link href="">Project link</a>
+              <p class="alt-link" data-modal-alt-link></p>
+
+              <div >
+                <p class="modal-text" data-modal-text>
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -621,7 +664,7 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="games">
+            <li class="project-item  active" data-filter-item data-category="VR" data-projects-item>
               <a href="#">
 
                 <figure class="project-img">
@@ -629,17 +672,35 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Projects/NiceHush-Title.jpg" alt="Nice Hush" loading="lazy">
+                  <img src="./assets/images/Projects/Tavola disegno 1-100.jpg" alt="Unannounced project" loading="lazy" data-projects-avatar>
                 </figure>
 
-                <h3 class="project-title">Nice Hush</h3>
+                <h3 class="project-title" data-projects-title>Unannounced project</h3>
+
+                <p class="project-category">VR</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="games" data-projects-item>
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Projects/NiceHush-Title.jpg" alt="Nice Hush" loading="lazy" data-projects-avatar>
+                </figure>
+
+                <h3 class="project-title" data-projects-title>Nice Hush</h3>
 
                 <p class="project-category">Game</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="games">
+            <li class="project-item  active" data-filter-item data-category="games"data-projects-item>
               <a href="#">
 
                 <figure class="project-img">
@@ -647,17 +708,17 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Projects/FriendsNotFound-Home.png" alt="Friends Not Found" loading="lazy">
+                  <img src="./assets/images/Projects/FriendsNotFound-Home.png" alt="Friends Not Found" loading="lazy" data-projects-avatar>
                 </figure>
 
-                <h3 class="project-title">Friends Not Found</h3>
+                <h3 class="project-title" data-projects-title>Friends Not Found</h3>
 
                 <p class="project-category">Game</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="games">
+            <li class="project-item  active" data-filter-item data-category="games"data-projects-item>
               <a href="#">
 
                 <figure class="project-img">
@@ -665,12 +726,66 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Projects/TimepuraEbi-Home.png" alt="Timepura Ebi" loading="lazy">
+                  <img src="./assets/images/Projects/TimepuraEbi-Home.png" alt="Timepura Ebi" loading="lazy" data-projects-avatar>
                 </figure>
 
-                <h3 class="project-title">Timepura Ebi</h3>
+                <h3 class="project-title" data-projects-title>Timepura Ebi</h3>
 
                 <p class="project-category">Game</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="vr"data-projects-item>
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Projects/Tavola disegno 1.jpg" alt="Metapoetry" loading="lazy" data-projects-avatar>
+                </figure>
+
+                <h3 class="project-title" data-projects-title>Meta poetry</h3>
+
+                <p class="project-category">VR</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="vr"data-projects-item>
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Projects/" alt="H-Alliday" loading="lazy" data-projects-avatar>
+                </figure>
+
+                <h3 class="project-title" data-projects-title>H-Alliday</h3>
+
+                <p class="project-category">VR</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="vr"data-projects-item>
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Projects/" alt="Debate" loading="lazy" data-projects-avatar>
+                </figure>
+
+                <h3 class="project-title" data-projects-title>Debate</h3>
+
+                <p class="project-category">VR</p>
 
               </a>
             </li>
@@ -685,11 +800,11 @@
           - Projects modal
         -->
 
-        <div class="modal-container" data-modal-container>
+        <!-- <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
 
-          <section class="testimonials-modal">
+          <section class="projects-modal">
 
             <button class="modal-close-btn" data-modal-close-btn>
               <ion-icon name="close-outline"></ion-icon>
@@ -723,7 +838,7 @@
 
           </section>
 
-        </div>
+        </div> -->
 
 
 
@@ -732,6 +847,7 @@
         - #BLOG
       -->
 
+      <!-- 
       <article class="blog" data-page="blog">
 
         <header>
@@ -914,7 +1030,7 @@
 
         </section>
 
-      </article>
+      </article> -->
 
 
 
@@ -924,6 +1040,7 @@
         - #CONTACT
       -->
 
+      <!-- 
       <article class="contact" data-page="contact">
 
         <header>
@@ -962,7 +1079,7 @@
 
         </section>
 
-      </article>
+      </article> -->
 
     </div>
 
