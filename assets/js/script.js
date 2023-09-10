@@ -26,6 +26,7 @@ const overlay = document.querySelector("[data-overlay]");
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
+const modalLink = document.querySelector("[data-modal-link]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
@@ -40,8 +41,33 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+
+    let title;
+    let text;
+    let link;
+
+    switch (modalImg.alt) {
+      case "finance":
+        title = "Finance";
+        text = "Finance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance textFinance text";
+       link = "https://www.deepl.com";
+        break;
+      case "orizon":
+        title = "Orizon";
+        text = "Orizon text";
+        link = "https://github.com";
+        break;
+        default:
+          title = "Aggiungi titolo";
+          text = "Aggiungi testo";
+          link = "https://google.com";
+
+        break;
+    }
+
+    modalTitle.innerHTML = title;
+    modalText.innerHTML = text;
+    modalLink.href = link;
 
     testimonialsModalFunc();
 
