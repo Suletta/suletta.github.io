@@ -1,12 +1,13 @@
 'use strict';
 
-const NICE_HUSH_DESCRIPTION = "Event: BigRock Game Jam<br>Multiplayer game for Twitch chat.<br><br>Team: 3 developers, 4 3D artists.";
-const FRIENDS_NOT_FOUND_DESCRIPTION = "Event: GameDev.tv Game Jam 2021<br><br>Game design, team management, asset implementation and gameplay development.<br><br>Team : 10 members.";
-const TIMEPURA_EBI_DESCRIPTION = "Event: Bullet Hell Jam 2021<br><br>I took care of the assets implementation, gameplay development and UI system.<br><br>Team: 7 members";
-const METAPOETRY_DESCRIPTION = "Partner Company: Alterego Digital LAB<br>Technical consulting for vr experience.<br>Team: 7 members.";
-const H_ALLIDAY_DESCRIPTION = "Company: H-Farm<br>Multiplayer virtual reality classroom for Meta Quest 1 and Meta Quest 2 standalone.<br>My role: UI programmer, tool programmer, gameplay programmer.<br>Team : 3 programmers, 3 3D artists, 1 UI artist, 1 product designer.";
-const DEBATE_DESCRIPTION = "Company:H-Farm<br>Prototype of a virtual debate championship, tested by '' to develop an official virtual format.<br>Multiplayer VR experience with role system.<br>My role: UI programmer, gameplay programmer.<br>Team : 3 programmers, 3 3D artists.";
-const UNANNOUNCED1_DESCRIPTION = "Company:BigRock<br>VR multiplayer brainstorming activity in fantasy setting.<br>My role: game designer, gameplay programmer, integration with server backend, asset integration and optimization, shader art, vfx optimization.<br>Team : 2 developers, 2 3D artists.";
+const NICE_HUSH_DESCRIPTION = "Event: BigRock Game Jam.<br>Team: 3 developers, 4 3D artists.<br><br>Multiplayer game for Twitch chat.";
+const FRIENDS_NOT_FOUND_DESCRIPTION = "Event: GameDev.tv Game Jam 2021.<br>Team : 10 members.<br><br>Game design, team management, asset implementation and gameplay development.";
+const TIMEPURA_EBI_DESCRIPTION = "Event: Bullet Hell Jam 2021.<br>Team: 7 members.<br><br>I took care of the assets implementation, gameplay development and UI system.";
+const METAPOETRY_DESCRIPTION = "Partner Company: Alterego Digital LAB.<br><br>Team: 7 members.<br>Technical consulting for vr experience.";
+const H_ALLIDAY_DESCRIPTION = "Company: H-Farm.<br>Team : 3 programmers, 3 3D artists, 1 UI artist, 1 product designer.<br>My role: UI programmer, tool programmer, gameplay programmer.<br><br>Multiplayer virtual reality classroom for Meta Quest 1 and Meta Quest 2 standalone.";
+const DEBATE_DESCRIPTION = "Company:H-Farm.<br>Team : 3 programmers, 3 3D artists.<br>My role: UI programmer, gameplay programmer.<br><br>Multiplayer VR experience with role system.<br>Prototype of a virtual debate championship, tested by Indire to develop an official virtual format.";
+const BRIDGETOAVALON_DESCRIPTION = "Companies:BigRock, Cisco.<br>Team : 2 developers, 2 3D artists.<br>My role: game designer, gameplay programmer, integration with server backend, asset integration and optimization, shader art, vfx optimization.<br><br>VR multiplayer brainstorming activity in fantasy setting for Cisco employees.";
+const FALCONERIA_DESCRIPTION = "Company:BigRock.<br>Team : 2 developers, 2 3D artists.<br>My role: game designer, gameplay programmer, asset integration and optimization, shader art, vfx.<br><br>VR narrative experience on falconry with a falconry history museum.";
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -78,8 +79,12 @@ for (let i = 0; i < testimonialsItem.length; i++) {
         text = DEBATE_DESCRIPTION;
         link = "";
         break;
-        case "Unannounced project":
-        text = UNANNOUNCED1_DESCRIPTION;
+        case "Bridge to Avalon":
+        text = BRIDGETOAVALON_DESCRIPTION;
+        link = "";
+        break;
+      case "Falconeria":
+        text = FALCONERIA_DESCRIPTION;
         link = "";
         break;
       default:

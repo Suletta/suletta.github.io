@@ -961,6 +961,7 @@ dal-container
 }
 
 .projects-modal {
+  max-width: 60%;
   background: var(--eerie-black-2);
   position: relative;
   padding: 15px;
