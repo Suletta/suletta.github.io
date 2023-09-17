@@ -1,13 +1,22 @@
 'use strict';
 
-const NICE_HUSH_DESCRIPTION = "Event: BigRock Game Jam.<br>Team: 3 developers, 4 3D artists.<br><br>Multiplayer game for Twitch chat.";
-const FRIENDS_NOT_FOUND_DESCRIPTION = "Event: GameDev.tv Game Jam 2021.<br>Team : 10 members.<br><br>Game design, team management, asset implementation and gameplay development.";
-const TIMEPURA_EBI_DESCRIPTION = "Event: Bullet Hell Jam 2021.<br>Team: 7 members.<br><br>I took care of the assets implementation, gameplay development and UI system.";
-const METAPOETRY_DESCRIPTION = "Partner Company: Alterego Digital LAB.<br><br>Team: 7 members.<br>Technical consulting for vr experience.";
-const H_ALLIDAY_DESCRIPTION = "Company: H-Farm.<br>Team : 3 programmers, 3 3D artists, 1 UI artist, 1 product designer.<br>My role: UI programmer, tool programmer, gameplay programmer.<br><br>Multiplayer virtual reality classroom for Meta Quest 1 and Meta Quest 2 standalone.";
-const DEBATE_DESCRIPTION = "Company:H-Farm.<br>Team : 3 programmers, 3 3D artists.<br>My role: UI programmer, gameplay programmer.<br><br>Multiplayer VR experience with role system.<br>Prototype of a virtual debate championship, tested by Indire to develop an official virtual format.";
-const BRIDGETOAVALON_DESCRIPTION = "Companies:BigRock, Cisco.<br>Team : 2 developers, 2 3D artists.<br>My role: game designer, gameplay programmer, integration with server backend, asset integration and optimization, shader art, vfx optimization.<br><br>VR multiplayer brainstorming activity in fantasy setting for Cisco employees.";
-const FALCONERIA_DESCRIPTION = "Company:BigRock.<br>Team : 2 developers, 2 3D artists.<br>My role: game designer, gameplay programmer, asset integration and optimization, shader art, vfx.<br><br>VR narrative experience on falconry with a falconry history museum.";
+const NICE_HUSH_DESCRIPTION = "Event: BigRock Game Jam.<br>Team: 3 developers, 4 3D artists.<br>Multiplayer game for Twitch chat.";
+const FRIENDS_NOT_FOUND_DESCRIPTION = "Event: GameDev.tv Game Jam 2021.<br>Team: 10 members.";
+const TIMEPURA_EBI_DESCRIPTION = "Event: Bullet Hell Jam 2021.<br>Team: 7 members.";
+const METAPOETRY_DESCRIPTION = "Partner Company: Alterego Digital LAB.<br>Team: 7 members.";
+const H_ALLIDAY_DESCRIPTION = "Company: H-Farm.<br>Team: 3 programmers, 3 3D artists, 1 UI artist, 1 product designer.<br>Multiplayer virtual reality classroom for Meta Quest 1 and Meta Quest 2 standalone.";
+const DEBATE_DESCRIPTION = "Company: H-Farm.<br>Team: 3 programmers, 3 3D artists.<br>Multiplayer VR experience with role system.<br>Prototype of a virtual debate championship, tested by Indire to develop an official virtual format.";
+const BRIDGETOAVALON_DESCRIPTION = "Companies: BigRock, Cisco.<br>Team : 2 developers, 2 3D artists.<br>VR multiplayer brainstorming activity in fantasy setting for Cisco employees.";
+const FALCONERIA_DESCRIPTION = "Company: BigRock.<br>Team: 2 developers, 2 3D artists.<br>VR narrative experience on falconry with a falconry history museum.";
+
+const NICE_HUSH_ROLE = "Game design, UI programming, asset integration.";
+const FRIENDS_NOT_FOUND_ROLE = "Game design, team management, asset implementation and gameplay development.";
+const TIMEPURA_EBI_ROLE = "Assets implementation, gameplay development and UI system.";
+const METAPOETRY_ROLE = "Technical consulting and experience design.";
+const H_ALLIDAY_ROLE = "UI programmer, tool programmer, gameplay programmer.";
+const DEBATE_ROLE = "Experience designer, UI programmer, gameplay programmer.";
+const BRIDGETOAVALON_ROLE = "Game designer, gameplay programmer, integration with server backend, asset integration and optimization, shader art, vfx optimization.";
+const FALCONERIA_ROLE = "Game designer, gameplay programmer, asset integration and optimization, shader art, vfx.";
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -32,7 +41,8 @@ const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
+const modalProjectText = document.querySelector("[data-modal-project-text]");
+const modalRoleText = document.querySelector("[data-modal-role-text]");
 const modalLink = document.querySelector("[data-modal-link]");
 const modalAltLink = document.querySelector("[data-modal-alt-link]");
 
@@ -51,50 +61,61 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalImg.src = this.querySelector("[data-projects-avatar]").src;
     modalImg.alt = this.querySelector("[data-projects-avatar]").alt;
 
-    let text;
+    let projectText;
+    let roleText;
     let link;
 
     switch (modalTitle.innerHTML) {
       case "Nice Hush":
-        text = NICE_HUSH_DESCRIPTION;
+        projectText = NICE_HUSH_DESCRIPTION;
+        roleText = NICE_HUSH_ROLE;
         link = "https://github.com/SanzioPedersoli/JamM34";
         break;
       case "Friends Not Found":
-        text = FRIENDS_NOT_FOUND_DESCRIPTION;
+        projectText = FRIENDS_NOT_FOUND_DESCRIPTION;
+        roleText = FRIENDS_NOT_FOUND_ROLE;
         link = "https://suletta.itch.io/friends-not-found";
         break;
       case "Timepura Ebi":
-        text = TIMEPURA_EBI_DESCRIPTION;
+        projectText = TIMEPURA_EBI_DESCRIPTION;
+        roleText = TIMEPURA_EBI_ROLE;
         link = "https://mattonzolo.itch.io/timepura-ebi";
         break;
       case "Meta poetry":
-        text = METAPOETRY_DESCRIPTION;
+        projectText = METAPOETRY_DESCRIPTION;
+        roleText = METAPOETRY_ROLE;
         link = "https://www.linkedin.com/posts/alterego-digital-lab_poesia-musica-realtaeqvirtuale-activity-7072127681487679489-5HgP?utm_source=share&utm_medium=member_android";
         break;
       case "H-Alliday":
-        text = H_ALLIDAY_DESCRIPTION;
+        projectText = H_ALLIDAY_DESCRIPTION;
+        roleText = H_ALLIDAY_ROLE;
         link = "";
         break;
       case "Debate":
-        text = DEBATE_DESCRIPTION;
+        projectText = DEBATE_DESCRIPTION;
+        roleText = DEBATE_ROLE;
         link = "";
         break;
         case "Bridge to Avalon":
-        text = BRIDGETOAVALON_DESCRIPTION;
+        projectText = BRIDGETOAVALON_DESCRIPTION;
+        roleText = BRIDGETOAVALON_ROLE;
         link = "";
         break;
       case "Falconeria":
-        text = FALCONERIA_DESCRIPTION;
+        projectText = FALCONERIA_DESCRIPTION;
+        roleText = FALCONERIA_ROLE;
         link = "";
         break;
       default:
-        text = "Aggiungi testo";
+        projectText = "Aggiungi testo";
+        roleText = "Aggiungi testo";
         link = "Aggiungi link";
         break;
 
     }
 
-    modalText.innerHTML = text;
+    modalProjectText.innerHTML = projectText;
+    modalRoleText.innerHTML = roleText;
 
     if(link){
       modalLink.innerHTML = "Project link";
@@ -102,7 +123,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
       modalAltLink.innerHTML = "";
     }
     else{
-      modalAltLink.innerHTML = "Link not available. Contact me for more info";
+      modalAltLink.innerHTML = "Link not available. Contact me for more info.";
       modalLink.innerHTML = "";
     }
 
