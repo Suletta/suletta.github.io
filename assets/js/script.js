@@ -8,6 +8,7 @@ const H_ALLIDAY_DESCRIPTION = "Company: H-Farm.<br>Team: 3 programmers, 3 3D art
 const DEBATE_DESCRIPTION = "Company: H-Farm.<br>Team: 3 programmers, 3 3D artists.<br>Multiplayer VR experience with role system.<br>Prototype of a virtual debate championship, tested by Indire to develop an official virtual format.";
 const BRIDGETOAVALON_DESCRIPTION = "Companies: BigRock, Cisco.<br>Team : 2 developers, 2 3D artists.<br>VR multiplayer brainstorming activity in fantasy setting for Cisco employees.";
 const FALCONERIA_DESCRIPTION = "Company: BigRock.<br>Team: 2 developers, 2 3D artists.<br>VR narrative experience on falconry with a falconry history museum.";
+const HMW_DESCRIPTION = "Company: BigRock.<br>Team: 4 developers, 10 3D artists.<br>VR multiplayer educational experience with the reproduction of the ESA Memorabilia Wall with addictional educational media.";
 
 const NICE_HUSH_ROLE = "Game design, UI programming, asset integration.";
 const FRIENDS_NOT_FOUND_ROLE = "Game design, team management, asset implementation and gameplay development.";
@@ -17,6 +18,7 @@ const H_ALLIDAY_ROLE = "UI programmer, tool programmer, gameplay programmer.";
 const DEBATE_ROLE = "Experience designer, UI programmer, gameplay programmer.";
 const BRIDGETOAVALON_ROLE = "Game designer, gameplay programmer, integration with server backend, asset integration and optimization, shader art, vfx optimization.";
 const FALCONERIA_ROLE = "Game designer, gameplay programmer, asset integration and optimization, shader art, vfx.";
+const HMW_ROLE = "Project supervisor, optimization, bugfix.";
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -45,6 +47,8 @@ const modalProjectText = document.querySelector("[data-modal-project-text]");
 const modalRoleText = document.querySelector("[data-modal-role-text]");
 const modalLink = document.querySelector("[data-modal-link]");
 const modalAltLink = document.querySelector("[data-modal-alt-link]");
+
+const modalImage = document.querySelector("[data-modal-image]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
@@ -96,7 +100,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
         roleText = DEBATE_ROLE;
         link = "";
         break;
-        case "Bridge to Avalon":
+      case "Bridge to Avalon":
         projectText = BRIDGETOAVALON_DESCRIPTION;
         roleText = BRIDGETOAVALON_ROLE;
         link = "";
@@ -104,6 +108,12 @@ for (let i = 0; i < testimonialsItem.length; i++) {
       case "Falconeria":
         projectText = FALCONERIA_DESCRIPTION;
         roleText = FALCONERIA_ROLE;
+        //modalImage.src="./assets/images/Projects/Falconeria1.png";
+        link = "";
+        break;
+      case "HMW":
+        projectText = HMW_DESCRIPTION;
+        roleText = HMW_ROLE;
         link = "";
         break;
       default:
